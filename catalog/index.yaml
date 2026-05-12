@@ -1,0 +1,8 @@
+# Registry of self-serve catalog items (no LLM call at runtime — Rule 6, 13).
+# Each item points to a template under templates/.
+items:
+  - id: create-management-zone
+    title: Create Management Zone
+    description: Create a Dynatrace management zone for an app/environment.
+    template: create-management-zone
+    form: catalog/items/create-management-zone.yaml

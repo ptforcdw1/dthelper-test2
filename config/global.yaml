@@ -1,0 +1,8 @@
+# Centralized config (Rule 10). Tenant URL + token are read from env at runtime,
+# not hardcoded here.
+dynatrace:
+  tenant_url_env: DT_TENANT_URL
+  api_token_env: DT_API_TOKEN
+
+audit:
+  log_dir: tasks   # tasks/<task_id>/execution.jsonl

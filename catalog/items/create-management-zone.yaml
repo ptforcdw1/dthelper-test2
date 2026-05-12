@@ -1,0 +1,21 @@
+# Form schema for the n8n catalog form.
+# Inputs are human-friendly per Rule 14 (no IDs).
+id: create-management-zone
+title: Create Management Zone
+template: create-management-zone
+inputs:
+  - name: app
+    label: Application name
+    type: string
+    required: true
+    pattern: "^[a-z][a-z0-9]*$"
+    help: "Lowercase alphanumeric. Example: myapp"
+  - name: env
+    label: Environment
+    type: enum
+    options: [uat, prod]
+    required: true
+  - name: requester
+    label: Your email (for audit)
+    type: string
+    required: true

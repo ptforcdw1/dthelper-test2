@@ -1,0 +1,9 @@
+# Registry of reusable templates. Catalog (and future CodeGen bot) consults this
+# BEFORE generating new code (Rule 6, Rule 13).
+templates:
+  - id: create-management-zone
+    title: Create Management Zone
+    description: Idempotently create a DT management zone using the naming convention.
+    dt_scopes: [WriteConfig, ReadConfig]
+    inputs: [app, env]
+    path: templates/create-management-zone

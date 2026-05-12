@@ -1,0 +1,23 @@
+# Naming convention (Rule 11). Single source of truth.
+# Pattern variables:
+#   {app}            lowercase alphanumeric (validated by validation_regex)
+#   {env}            one of: uat, prod
+#   {resource_type}  short code (see resource_codes)
+#   {name}           specific instance name (default = "default")
+
+casing: lowercase
+separator: "_"
+allowed_envs: [uat, prod]
+
+resource_codes:
+  management_zone: mz
+  tag: tag
+  alerting_profile: ap
+
+pattern:
+  management_zone: "{app}_{env}_{resource_type}_{name}"
+  tag:             "{app}_{env}_{resource_type}_{name}"
+  alerting_profile: "{app}_{env}_{resource_type}_{name}"
+
+# Validation regex applied to ALL generated names.
+validation_regex: "^[a-z][a-z0-9_]*$"

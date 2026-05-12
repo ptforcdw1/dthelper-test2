@@ -1,0 +1,27 @@
+id: create-management-zone
+title: Create Management Zone
+description: Creates a DT management zone for an app/environment using the
+  standard naming convention. Idempotent — returns existing MZ if name matches.
+
+inputs:
+  - name: app
+    type: string
+    required: true
+  - name: env
+    type: enum
+    options: [uat, prod]
+    required: true
+
+outputs:
+  - name: management_zone_id
+    description: ID of the created (or pre-existing) management zone.
+
+dt_scopes:
+  - WriteConfig
+  - ReadConfig
+
+naming:
+  resource_type: mz
+  pattern_key: management_zone   # see config/naming-convention.yaml
+
+idempotent: true

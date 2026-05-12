@@ -1,0 +1,4 @@
+app: myapp
+env: uat
+owner_email: ptforcd@outlook.com
+# Future fields (Phase 2+): tags, alerting profile, mz scope rules, etc.
